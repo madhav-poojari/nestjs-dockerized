@@ -7,6 +7,11 @@ export class UserEntity {
     id: number;
 
     @Column()
-    name: string;
+    user_id: string;
+  
+    @Column()
+    content_id: string;
+
+    
 
 }

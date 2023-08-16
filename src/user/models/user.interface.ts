@@ -1,4 +1,6 @@
 export interface UserI {
     id: number;
-    name: string;
+    user_id: string;
+    content_id: string;
+  
 }
