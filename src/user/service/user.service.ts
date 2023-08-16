@@ -16,7 +16,10 @@ export class UserService {
     add(user: UserI): Observable<UserI> {
         return from(this.userRepository.save(user));
     }
-
+    async hasUserLikedContent(user_id: string, content_id: string): Promise<boolean> {
+        const likeEvent = await this.userRepository.findOne({ user_id, content_id });
+        return !!likeEvent;
+      }
     findAll(): Observable<UserI[]> {
         return from(this.userRepository.find());
     }
