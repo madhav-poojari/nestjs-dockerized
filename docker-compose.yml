@@ -15,7 +15,7 @@ services:
             - "8080:3000"
 
     postgres:
-        image: postgres:10.4
+        image: postgres
         ports:
             - "35000:5432"
         environment: 
